@@ -1,4 +1,4 @@
-package subsystems.Intake;
+package subsystems.Algaer;
 import static edu.wpi.first.units.Units.Newton;
 
 import com.ctre.phoenix6.hardware.TalonFX;
@@ -11,12 +11,12 @@ public class intakingSystem {
     TalonFX Wheelmotor = new TalonFX(2);
     PIDController PivotPID = new PIDController(1, 0., 0);
     PIDController WheelPID = new PIDController(1, 0., 0);
-    IntakeStates Currentstate = IntakeStates.IDLE;
+    AlgaerStates Currentstate = AlgaerStates.IDLE;
     public intakingSystem() {
         Pivotmotor.setVoltage(PivotPID.calculate(Pivotmotor.getPosition().getValueAsDouble(), Currentstate.getTargetSpeed()));
         Wheelmotor.setVoltage(WheelPID.calculate(Wheelmotor.getPosition().getValueAsDouble(), Currentstate.getTargetPosition()));
     }
-    public void setState(IntakeStates state) {
+    public void setState(AlgaerStates state) {
         this.Currentstate = state;
         Pivotmotor.setVoltage(PivotPID.calculate(Pivotmotor.getPosition().getValueAsDouble(), Currentstate.getTargetSpeed()));
         Wheelmotor.setVoltage(WheelPID.calculate(Wheelmotor.getPosition().getValueAsDouble(), Currentstate.getTargetPosition()));

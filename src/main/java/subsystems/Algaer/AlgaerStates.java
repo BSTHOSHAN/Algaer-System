@@ -1,26 +1,26 @@
-package subsystems.Intake;
+package subsystems.Algaer;
 import com.ctre.phoenix6.hardware.TalonFX;
 import edu.wpi.first.math.controller.PIDController;
-import subsystems.Intake.IntakeStates;
+import subsystems.Algaer.AlgaerStates;
 
   
-public enum IntakeStates {
+public enum AlgaerStates {
 
     
     IDLE(0, 0),
     INTAKING(1, 190),
     SHOOTING(-1, 190);
-    private IntakeStates Currentstate;
+    private AlgaerStates Currentstate;
   
-        public void setState(IntakeStates state) {
+        public void setState(AlgaerStates state) {
         this.Currentstate = state;
     }
-    public IntakeStates getState() {
+    public AlgaerStates getState() {
         return this.Currentstate;
     }
     private final int targetSpeed;
     private final int targetPosition;
-    private IntakeStates(int targetSpeed, int targetPosition) {
+    private AlgaerStates(int targetSpeed, int targetPosition) {
         this.targetSpeed = targetSpeed;
         this.targetPosition = targetPosition;
     } 
