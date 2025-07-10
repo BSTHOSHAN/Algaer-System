@@ -1,12 +1,12 @@
 package subsystems.Algaer;
+import org.team7525.subsystem.SubsystemStates;
+
 import com.ctre.phoenix6.hardware.TalonFX;
 import edu.wpi.first.math.controller.PIDController;
 import subsystems.Algaer.AlgaerStates;
 
   
-public enum AlgaerStates {
-
-    
+public enum AlgaerStates implements SubsystemStates {
     IDLE(0, 0),
     INTAKING(1, 190),
     SHOOTING(-1, 190);
