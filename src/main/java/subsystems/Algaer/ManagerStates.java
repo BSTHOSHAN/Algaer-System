@@ -7,28 +7,18 @@ import subsystems.Algaer.ManagerStates;
 
   
 public enum ManagerStates implements SubsystemStates {
-    IDLE(0, 0),
-    INTAKING(1, 190),
-    SHOOTING(-1, 190);
-    private ManagerStates Currentstate;
-  
-        public void setState(ManagerStates state) {
-        this.Currentstate = state;
+    IDLE(AlgaerStates.IDLE),
+    INTAKING(AlgaerStates.INTAKING),
+    SHOOTING(AlgaerStates.SHOOTING);
+
+    private AlgaerStates algaerStates;
+
+    ManagerStates(AlgaerStates algaerStates) {
+        this.algaerStates = algaerStates;
     }
-    public ManagerStates getState() {
-        return this.Currentstate;
+    public AlgaerStates getAlgaerStates() {
+        return algaerStates;
     }
-    private final int targetSpeed;
-    private final int targetPosition;
-    private ManagerStates(int targetSpeed, int targetPosition) {
-        this.targetSpeed = targetSpeed;
-        this.targetPosition = targetPosition;
-    } 
-    public double getTargetSpeed() {
-        return targetSpeed;
-    }
-    public double getTargetPosition() {
-        return targetPosition;
-    }
+    
     
 }

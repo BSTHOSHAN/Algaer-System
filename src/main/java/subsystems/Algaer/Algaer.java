@@ -17,7 +17,7 @@ public class Algaer extends Subsystem<ManagerStates>{
     PIDController PivotPID = new PIDController(1, 0., 0);
     PIDController WheelPID = new PIDController(1, 0., 0);
     private final XboxController controller;
-    ManagerStates Currentstate = ManagerStates.IDLE;
+    AlgaerStates Currentstate = AlgaerStates.IDLE;
     public Algaer() {
         super("algaer", ManagerStates.IDLE);
         Pivotmotor.setVoltage(PivotPID.calculate(Pivotmotor.getPosition().getValueAsDouble(), Currentstate.getTargetSpeed()));
@@ -37,7 +37,7 @@ public class Algaer extends Subsystem<ManagerStates>{
 
     @Override
     public void stateInit() {
-        Currentstate = ManagerStates.IDLE; // Initialize to IDLE state
+        Currentstate = AlgaerStates.IDLE; // Initialize to IDLE state
         PivotPID.reset();
         WheelPID.reset();
     }
