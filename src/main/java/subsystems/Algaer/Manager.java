@@ -26,5 +26,9 @@ public class Manager extends Subsystem<ManagerStates> {
             // TODO Auto-generated method stub
             throw new UnsupportedOperationException("Unimplemented method 'runState'");
         }
+        public static void runAllPeriodic() {
+            // TODO Auto-generated method stub
+            throw new UnsupportedOperationException("Unimplemented method 'runAllPeriodic'");
+        }
     }
     
