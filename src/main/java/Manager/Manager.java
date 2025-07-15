@@ -1,8 +1,9 @@
-package subsystems.Algaer;
+package Manager;
 
 import org.team7525.subsystem.Subsystem;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
+import subsystems.Algaer.Algaer;
 
 
 

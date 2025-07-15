@@ -4,9 +4,9 @@
 
 package frc.robot;
 
+import Manager.Manager;
 import edu.wpi.first.wpilibj.TimedRobot;
 import subsystems.Algaer.Algaer;
-import subsystems.Algaer.Manager;
 
 /**
  * The methods in this class are called automatically corresponding to each mode, as described in
