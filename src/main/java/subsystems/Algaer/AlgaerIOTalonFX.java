@@ -21,6 +21,6 @@ class AlgaerIOTalonFX implements AlgaerIO {
 
     @Override
     public boolean getGamePiece() {
-        return talonFX.getSensorCollection().isFwdLimitSwitchClosed();
+        return true;
     }
 }
