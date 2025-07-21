@@ -21,6 +21,14 @@ public enum ManagerStates implements SubsystemStates {
     public AlgaerStates getAlgaerStates() {
         return algaerStates;
     }
+    public double getpivotPosition() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getpivotPosition'");
+    }
+    public double getwheelSpeed() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getwheelSpeed'");
+    }
     
     
 }
