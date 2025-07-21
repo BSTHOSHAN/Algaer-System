@@ -5,6 +5,8 @@ package subsystems.Algaer;
 
 import com.ctre.phoenix6.hardware.TalonFX;
 
+import GlobalConstants;
+import GlobalConstants.*;
 import Manager.ManagerStates;
 import edu.wpi.first.wpilibj.XboxController;
 
@@ -12,8 +14,6 @@ import org.littletonrobotics.junction.Logger;
 import org.team7525.subsystem.Subsystem;
 
 import edu.wpi.first.math.controller.PIDController;
-import frc.robot.GlobalConstants.*;
-import frc.robot.GlobalConstants;
 
 
 public class Algaer extends Subsystem<ManagerStates>{
