@@ -13,12 +13,6 @@ public enum AlgaerStates implements SubsystemStates {
     SHOOTING(-1, 190);
     private ManagerStates Currentstate;
   
-        public void setState(ManagerStates state) {
-        this.Currentstate = state;
-    }
-    public ManagerStates getState() {
-        return this.Currentstate;
-    }
     private final int targetSpeed;
     private final int targetPosition;
     private AlgaerStates(int targetSpeed, int targetPosition) {
