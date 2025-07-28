@@ -11,7 +11,10 @@ import subsystems.Algaer.AlgaerStates;
 public enum ManagerStates implements SubsystemStates {
     IDLE(AlgaerStates.IDLE),
     INTAKING(AlgaerStates.INTAKING),
-    SHOOTING(AlgaerStates.SHOOTING);
+    SHOOTING(AlgaerStates.SHOOTING),
+    DRIVE_FAST(AlgaerStates.IDLE),
+    DRIVE_SLOW(AlgaerStates.IDLE);
+
 
     private AlgaerStates algaerStates;
 

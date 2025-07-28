@@ -4,7 +4,10 @@
 
 package frc.robot;
 
+import java.io.IOException;
+
 import Manager.Manager;
+import SwerveSubsystem.SwerveSubsystem;
 import edu.wpi.first.wpilibj.TimedRobot;
 import subsystems.Algaer.Algaer;
 
@@ -19,12 +22,26 @@ public class Robot extends TimedRobot {
    * This function is run when the robot is first started up and should be used for any
    * initialization code.
    */
-  Manager manager = new Manager(new Algaer());
-  public Robot() { }
+  
+  private SwerveSubsystem swerveSubsystem;
+  private Manager manager;
+  
+  
+  @Override
+  public void robotInit() {
+    try {
+      swerveSubsystem = new SwerveSubsystem();
+    } catch (IOException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
+    manager = new Manager(null, swerveSubsystem);
+
+  }
   @Override
   public void robotPeriodic() {
-    Manager.runAllPeriodic();
-  
+    swerveSubsystem.periodic();
+    
   }
   
   @Override
@@ -37,7 +54,9 @@ public class Robot extends TimedRobot {
   public void teleopInit() {}
 
   @Override
-  public void teleopPeriodic() {}
+  public void teleopPeriodic() {
+    manager.run(null);
+  }
 
   @Override
   public void disabledInit() {}
