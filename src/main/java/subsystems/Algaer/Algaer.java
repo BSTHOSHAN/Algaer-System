@@ -5,10 +5,11 @@ package subsystems.Algaer;
 
 import com.ctre.phoenix6.hardware.TalonFX;
 
-import GlobalConstants;
-import GlobalConstants.*;
+
+
 import Manager.ManagerStates;
 import edu.wpi.first.wpilibj.XboxController;
+import subsystems.Algaer.GlobalConstants.*;
 
 import org.littletonrobotics.junction.Logger;
 import org.team7525.subsystem.Subsystem;
