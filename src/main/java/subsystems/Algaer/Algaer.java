@@ -5,11 +5,10 @@ package subsystems.Algaer;
 
 import com.ctre.phoenix6.hardware.TalonFX;
 
-
-
-import Manager.ManagerStates;
 import edu.wpi.first.wpilibj.XboxController;
-import subsystems.Algaer.GlobalConstants.*;
+import frc.robot.GlobalConstants;
+import frc.robot.GlobalConstants.*;
+import subsystems.Manager.ManagerStates;
 
 import org.littletonrobotics.junction.Logger;
 import org.team7525.subsystem.Subsystem;
@@ -26,15 +25,16 @@ public class Algaer extends Subsystem<ManagerStates>{
 
     public Algaer() {
         super("algaer", ManagerStates.IDLE);
-        switch GlobalConstants.ROBOT_MODE {
+        switch (GlobalConstants.ROBOT_MODE) {
+            case REAL:
+                io = new AlgaerIOTalonFX();
+                break;
             case SIM:
                 io = new AlgaerIOSim();
                 break;
-        
-            case:
-                io = new AlgaerIOReal();
-                break;
-        }    
+            default:
+                throw new IllegalArgumentException("Invalid Algaer type: " + GlobalConstants.ROBOT_MODE);
+        }
     }
 
 

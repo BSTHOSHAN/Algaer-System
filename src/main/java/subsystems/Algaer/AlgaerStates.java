@@ -3,8 +3,8 @@ import org.team7525.subsystem.SubsystemStates;
 
 import com.ctre.phoenix6.hardware.TalonFX;
 
-import Manager.ManagerStates;
 import edu.wpi.first.math.controller.PIDController;
+import subsystems.Manager.ManagerStates;
 
   
 public enum AlgaerStates implements SubsystemStates {

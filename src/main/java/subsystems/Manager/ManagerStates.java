@@ -1,11 +1,11 @@
-package Manager;
+package subsystems.Manager;
 import org.team7525.subsystem.SubsystemStates;
 
 import com.ctre.phoenix6.hardware.TalonFX;
 
-import Manager.ManagerStates;
 import edu.wpi.first.math.controller.PIDController;
 import subsystems.Algaer.AlgaerStates;
+import subsystems.Manager.ManagerStates;
 
   
 public enum ManagerStates implements SubsystemStates {

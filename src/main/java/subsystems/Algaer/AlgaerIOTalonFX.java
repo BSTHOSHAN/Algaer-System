@@ -5,8 +5,8 @@ import com.ctre.phoenix6.hardware.TalonFX;
 class AlgaerIOTalonFX implements AlgaerIO {
     private TalonFX talonFX;
 
-    public AlgaerIOTalonFX(TalonFX talonFX) {
-        this.talonFX = talonFX;
+    public AlgaerIOTalonFX() {
+        talonFX = new TalonFX(0);
     }
 
     @Override

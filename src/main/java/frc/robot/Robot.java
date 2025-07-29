@@ -6,10 +6,10 @@ package frc.robot;
 
 import java.io.IOException;
 
-import Manager.Manager;
-import SwerveSubsystem.SwerveSubsystem;
 import edu.wpi.first.wpilibj.TimedRobot;
 import subsystems.Algaer.Algaer;
+import subsystems.Manager.Manager;
+import subsystems.SwerveSubsystem.SwerveSubsystem.SwerveSubsystem;
 
 /**
  * The methods in this class are called automatically corresponding to each mode, as described in
