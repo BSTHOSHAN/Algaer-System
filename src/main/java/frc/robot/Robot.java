@@ -30,7 +30,7 @@ public class Robot extends TimedRobot {
   @Override
   public void robotInit() {
     swerveSubsystem = new SwerveSubsystem();
-    manager = new Manager(new Algaer(), swerveSubsystem);
+    manager = new Manager (new Algaer(), swerveSubsystem);
 
   }
   @Override
