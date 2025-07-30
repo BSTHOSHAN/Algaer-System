@@ -1,4 +1,4 @@
-package subsystems.Algaer;
+package frc.robot.subsystems.Algaer;
 import com.ctre.phoenix6.hardware.TalonFX;
 
 

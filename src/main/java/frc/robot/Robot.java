@@ -7,9 +7,9 @@ package frc.robot;
 import java.io.IOException;
 
 import edu.wpi.first.wpilibj.TimedRobot;
-import subsystems.Algaer.Algaer;
-import subsystems.Manager.Manager;
-import subsystems.SwerveSubsystem.SwerveSubsystem.SwerveSubsystem;
+import frc.robot.subsystems.Algaer.Algaer;
+import frc.robot.subsystems.Manager.Manager;
+import frc.robot.subsystems.SwerveSubsystem.SwerveSubsystem;
 
 /**
  * The methods in this class are called automatically corresponding to each mode, as described in
@@ -29,19 +29,14 @@ public class Robot extends TimedRobot {
   
   @Override
   public void robotInit() {
-    try {
-      swerveSubsystem = new SwerveSubsystem();
-    } catch (IOException e) {
-      // TODO Auto-generated catch block
-      e.printStackTrace();
-    }
-    manager = new Manager(null, swerveSubsystem);
+    swerveSubsystem = new SwerveSubsystem();
+    manager = new Manager(new Algaer(), swerveSubsystem);
 
   }
   @Override
   public void robotPeriodic() {
     swerveSubsystem.periodic();
-    
+    manager.periodic();
   }
   
   @Override
@@ -55,7 +50,7 @@ public class Robot extends TimedRobot {
 
   @Override
   public void teleopPeriodic() {
-    manager.run(null);
+    manager.periodic();
   }
 
   @Override

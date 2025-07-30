@@ -1,4 +1,4 @@
-package subsystems.Algaer;
+package frc.robot.subsystems.Algaer;
 
 
 
@@ -8,7 +8,8 @@ import com.ctre.phoenix6.hardware.TalonFX;
 import edu.wpi.first.wpilibj.XboxController;
 import frc.robot.GlobalConstants;
 import frc.robot.GlobalConstants.*;
-import subsystems.Manager.ManagerStates;
+import frc.robot.subsystems.Manager.ManagerStates;
+import frc.robot.subsystems.SwerveSubsystem.DriveStates;
 
 import org.littletonrobotics.junction.Logger;
 import org.team7525.subsystem.Subsystem;
@@ -44,6 +45,12 @@ public class Algaer extends Subsystem<ManagerStates>{
 
         io.setSpeed(getState().getwheelSpeed());
         io.setPivotAngle(getState().getpivotPosition());
+    }
+
+
+    public Object setState(DriveStates driveFast) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setState'");
     }
 
 

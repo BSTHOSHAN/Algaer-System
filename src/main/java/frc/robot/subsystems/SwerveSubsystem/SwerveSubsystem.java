@@ -1,4 +1,4 @@
-package subsystems.SwerveSubsystem;
+package frc.robot.subsystems.SwerveSubsystem;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,13 +13,19 @@ import swervelib.SwerveDrive;
 import edu.wpi.first.math.util.Units;
 
 public class SwerveSubsystem extends Subsystem<DriveStates> {
-    private final SwerveDrive swerveDrive;
-
-    public SwerveSubsystem() throws IOException {
-        File directory = new File(Filesystem.getDeployDirectory(), "swerve");
-        double maxSpeed = Units.feetToMeters(12); // your top speed
-        swerveDrive = new SwerveParser(directory)
+    private SwerveDrive swerveDrive;
+    
+    public SwerveSubsystem() {
+        super("swerve", DriveStates.DRIVE_NORMAL);
+        try {
+            File directory = new File(Filesystem.getDeployDirectory(), "swerve");
+            double maxSpeed = Units.feetToMeters(12); // your top speed
+            swerveDrive = new SwerveParser(directory)
             .createSwerveDrive(maxSpeed);
+        } catch (Exception e) {
+            System.out.println("hello");
+        }        
+                
     }
 
     public void periodic() {
@@ -35,6 +41,12 @@ public class SwerveSubsystem extends Subsystem<DriveStates> {
             false
         );
 
+    }
+
+    @Override
+    protected void runState() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'runState'");
     }
   
 

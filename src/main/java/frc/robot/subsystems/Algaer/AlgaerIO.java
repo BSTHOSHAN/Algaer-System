@@ -1,4 +1,4 @@
-package subsystems.Algaer;
+package frc.robot.subsystems.Algaer;
 
 public interface AlgaerIO {
 

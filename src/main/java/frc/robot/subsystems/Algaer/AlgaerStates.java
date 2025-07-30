@@ -1,10 +1,10 @@
-package subsystems.Algaer;
+package frc.robot.subsystems.Algaer;
 import org.team7525.subsystem.SubsystemStates;
 
 import com.ctre.phoenix6.hardware.TalonFX;
 
 import edu.wpi.first.math.controller.PIDController;
-import subsystems.Manager.ManagerStates;
+import frc.robot.subsystems.Manager.ManagerStates;
 
   
 public enum AlgaerStates implements SubsystemStates {

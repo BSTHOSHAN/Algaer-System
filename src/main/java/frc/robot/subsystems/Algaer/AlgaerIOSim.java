@@ -1,4 +1,4 @@
-package subsystems.Algaer;
+package frc.robot.subsystems.Algaer;
 
 import edu.wpi.first.wpilibj.simulation.SingleJointedArmSim;
 import edu.wpi.first.math.controller.PIDController;

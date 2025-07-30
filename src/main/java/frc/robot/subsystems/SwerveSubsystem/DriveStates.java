@@ -1,6 +1,8 @@
-package frc.robot.SwerveSubsystem;
+package frc.robot.subsystems.SwerveSubsystem;
 
-public enum DriveStates {
+import org.team7525.subsystem.SubsystemStates;
+
+public enum DriveStates implements SubsystemStates{
     DRIVE_FAST(1, 1.5),
     DRIVE_SLOW(1, 0.5),
     DRIVE_NORMAL(1, 1);
